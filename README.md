@@ -17,13 +17,13 @@
 Kodunuzla ilgili testler yapmak için kullanabileceğiniz bir _"test"_ betiği zaten var.
 Veritabanını orijinal durumuna sıfırlamanıza izin veren bir _"resetdb"_ komut dosyası mevcuttur.
 
-- [ ] API sunucusunu çalıştırmak için "node" kullanan _"start"_ adlı bir _npm betiği_ yazın.
-- [ ] API sunucusunu çalıştırmak için `nodemon` kullanan _"server"_ adlı bir _npm betiği_ yazın.
-- [ ] Üretimde kullanılmayacak bir geliştirme bağımlılığı olarak _nodemon_ yükleyin.
+- [+] API sunucusunu çalıştırmak için "node" kullanan _"start"_ adlı bir _npm betiği_ yazın.
+- [+] API sunucusunu çalıştırmak için `nodemon` kullanan _"server"_ adlı bir _npm betiği_ yazın.
+- [+] Üretimde kullanılmayacak bir geliştirme bağımlılığı olarak _nodemon_ yükleyin.
 
 ### Görev 2: Ortam Değişkenlerini Tüket
 
-- [ ] "process.env" değişkeninden bağlantı noktası numarasını getirin, "process.env.PORT" tanımsızsa "9000"e geri dönün **!!!**
+- [+] "process.env" değişkeninden bağlantı noktası numarasını getirin, "process.env.PORT" tanımsızsa "9000"e geri dönün **!!!**
 
 ### Görev 3: Uç Noktalar Oluşturun
 
@@ -49,7 +49,7 @@ Veritabanını orijinal durumuna sıfırlamanıza izin veren bir _"resetdb"_ kom
   - Belirtilen "id" ile bir projeye ait bir dizi eylem (boş olabilir) döndürür.
   - Belirtilen id'ye sahip bir proje yoksa, 404 durum koduyla yanıt verir.
 
-`api/actions/actions-router.js` içinde  _actions_ CRUD işlemleri yapan uç noktalar oluşurun:
+`api/actions/actions-router.js` içinde _actions_ CRUD işlemleri yapan uç noktalar oluşurun:
 
 - [ ] `[GET] /api/actions`
   - Yanıtın gövdesi olarak bir dizi eylem (action) (veya boş bir dizi) döndürür.
@@ -78,22 +78,22 @@ Dahil edilen veritabanında (`./data/database.db3`) depolanan her bir _resource_
 
 #### Projects
 
-| Field       | Data Type | Metadata                                                                    |
-| ----------- | --------- | --------------------------------------------------------------------------- |
-| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur        |
-| name        | string    | required                                                                    |
-| description | string    | required                                                                    |
-| completed   | boolean   | not required, proje oluşturulurken varsayılan false dur                     |
+| Field       | Data Type | Metadata                                                             |
+| ----------- | --------- | -------------------------------------------------------------------- |
+| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur |
+| name        | string    | required                                                             |
+| description | string    | required                                                             |
+| completed   | boolean   | not required, proje oluşturulurken varsayılan false dur              |
 
 #### Actions
 
-| Field       | Data Type | Metadata                                                                                         |
-| ----------- | --------- | ------------------------------------------------------------------------------------------------ |
-| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur                             |
-| project_id  | number    | required, var olan projenin id si olmalı                                                         |
-| description | string    | required, 128 karakterden uzun olmamalı                                                          |
-| notes       | string    | required, limit yok. Not almak için ya da eylemi tamamlamak için gerekli şeyleri kaydetmek için  |
-| completed   | boolean   | not required, eylemler oluşturulurken varsayılan false dur                                       |
+| Field       | Data Type | Metadata                                                                                        |
+| ----------- | --------- | ----------------------------------------------------------------------------------------------- |
+| id          | number    | projeleri oluştururken bunu sağlamayın, veritabanı kendisi oluşturur                            |
+| project_id  | number    | required, var olan projenin id si olmalı                                                        |
+| description | string    | required, 128 karakterden uzun olmamalı                                                         |
+| notes       | string    | required, limit yok. Not almak için ya da eylemi tamamlamak için gerekli şeyleri kaydetmek için |
+| completed   | boolean   | not required, eylemler oluşturulurken varsayılan false dur                                      |
 
 ### Veritabanı Kalıcılığı Yardımcıları Hakkında Bilgi
 
